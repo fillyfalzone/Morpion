@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    font-family: century, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1100px;
+}
+
+.background{
+    position: relative;
+    background-color: rgb(238, 235, 235);
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 1000px;
+    height: 100px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+.showResult{
+    visibility: visible;
+    transition: all 0.5s ease;
+}
+
+#grid {
+    width: 640px;
+    background-color: #B4CF6630;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.seat1, .seat2{
+    width: 200px;
+    height: 640px;
+    background-color: antiquewhite;
+    text-align: center;
+    transition: all .3s ease;
+}
+.showSeat1{
+    background-color:rgba(0, 136, 0, 0.295);
+    transition: all .3s ease;
+}
+.showSeat2{
+    background-color:rgba(136, 0, 0, 0.377);
+    transition: all .3s ease;
+}
+
+span{
+    display: block;
+    padding: 30px 0;
+    font-size: 23px;
+}
+.win1, .win2{
+    font-size: 35px;
+    font-weight: bold;
+    visibility: hidden;
+   
+}
+.winBlink1{
+    visibility: visible;
+    animation: clignotement 1s infinite;
+}
+.winBlink2{
+    visibility: visible;
+    animation: clignotement 1s infinite;
+}
+
+@keyframes clignotement {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
